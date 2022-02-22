@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <div class="menu" >
+                        <button mat-raised-button color="success" (click)="fetchPoems()">
+                            Fetch poem
+                        </button>
+                        &nbsp;
+                        <button mat-raised-button color="accent" (click)="fetchFavorites()"> 
+                            <!-- <mat-icon>favorite</mat-icon> -->
+                            Favorite
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+        
+        <div class="card">
+
+            <div class="sort">
+                
+                <select class="form-control" (change)="sortData($event)">
+                    <option>Select</option>
+                    <option value="title">title</option>
+                    <option value="author">author</option>
+                </select>
+                
+        
+                <!-- <button mat-mini-fab color="primary">
+                    <mat-icon>favorite</mat-icon>
+                </button> -->
+            </div>
+            <hr>
+            <mat-progress-bar [hidden]="hideProgress" mode="query"></mat-progress-bar>
+            <div class="card-body">        
+                <div class="card-text" *ngFor="let poem of poemList">
+                    <div class="mouse-pointer" (click)="displayPoem(poem)">
+                        <div class="poem-title">
+                            {{poem.title}}
+                        </div>
+                        <div class="poem-author">
+                            {{poem.author}}
+                        </div>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

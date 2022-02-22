@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedService } from './shared/shared.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web';
+
+  hidePoemDetails = false;
+  constructor(private shared: SharedService){
+
+  }
+
+  ngOnInit(): void {
+    
+    this.shared.poem.subscribe( value => {
+      if(value){
+        // this.hidePoemDetails = false;
+      }
+    })
+    
+  }
+
 }

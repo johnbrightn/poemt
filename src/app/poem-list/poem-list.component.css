@@ -1,0 +1,20 @@
+
+.sort{
+    margin: 10px;
+    width: 150px;
+
+    padding: 5px;
+    
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+.mouse-pointer{
+    cursor: pointer;
+}
