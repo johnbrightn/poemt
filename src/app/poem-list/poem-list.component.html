@@ -39,8 +39,8 @@
             <hr>
             <mat-progress-bar [hidden]="hideProgress" mode="query"></mat-progress-bar>
             <div class="card-body">        
-                <div class="card-text" *ngFor="let poem of poemList">
-                    <div class="mouse-pointer" (click)="displayPoem(poem)">
+                <div class="card-text mouse-pointer" *ngFor="let poem of poemList">
+                    <div class="" (click)="displayPoem(poem)">
                         <div class="poem-title">
                             {{poem.title}}
                         </div>

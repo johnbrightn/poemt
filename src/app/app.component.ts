@@ -9,7 +9,7 @@ import { SharedService } from './shared/shared.service';
 export class AppComponent {
   title = 'web';
 
-  hidePoemDetails = false;
+  hidePoemDetails = true;
   constructor(private shared: SharedService){
 
   }
@@ -18,7 +18,7 @@ export class AppComponent {
     
     this.shared.poem.subscribe( value => {
       if(value){
-        // this.hidePoemDetails = false;
+         this.hidePoemDetails = false;
       }
     })
     
